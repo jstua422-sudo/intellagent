@@ -365,11 +365,14 @@ border-radius: 4px;
             <form class="space-y-6 bg-[#0A0A0A] p-8 md:p-10 rounded-2xl border border-white/10 shadow-2xl">
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="space-y-2">
+                        <form
+                          action="https://formspree.io/f/xrelzzln" 
+                          method="POST">
                         <label for="name" class="text-sm font-medium text-neutral-300">Full Name</label>
                         <input type="text" id="name" placeholder="John Doe" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-neutral-600 focus:outline-none focus:border-[#6366F1] focus:ring-1 focus:ring-[#6366F1] transition-all">
                     </div>
                     <div class="space-y-2">
-                        <label for="email" class="text-sm font-medium text-neutral-300">Work Email</label>
+                        <label for="email" class="text-sm font-medium text-neutral-300">Email</label>
                         <input type="email" id="email" placeholder="john@company.com" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-neutral-600 focus:outline-none focus:border-[#6366F1] focus:ring-1 focus:ring-[#6366F1] transition-all">
                     </div>
                 </div>
@@ -380,23 +383,19 @@ border-radius: 4px;
                 </div>
 
                 <div class="space-y-2">
-                    <label for="interest" class="text-sm font-medium text-neutral-300">Interested In</label>
+                    <label for="interest" class="text-sm font-medium text-neutral-300">Service</label>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
                         <label class="cursor-pointer">
                             <input type="checkbox" class="peer sr-only">
-                            <div class="text-center text-sm py-2 px-3 rounded-md border border-white/10 bg-white/5 text-neutral-400 peer-checked:bg-[#6366F1]/20 peer-checked:text-[#6366F1] peer-checked:border-[#6366F1] transition-all">Consulting</div>
+                            <div class="text-center text-sm py-2 px-3 rounded-md border border-white/10 bg-white/5 text-neutral-400 peer-checked:bg-[#6366F1]/20 peer-checked:text-[#6366F1] peer-checked:border-[#6366F1] transition-all">AI Consultation</div>
                         </label>
                         <label class="cursor-pointer">
                             <input type="checkbox" class="peer sr-only">
-                            <div class="text-center text-sm py-2 px-3 rounded-md border border-white/10 bg-white/5 text-neutral-400 peer-checked:bg-[#6366F1]/20 peer-checked:text-[#6366F1] peer-checked:border-[#6366F1] transition-all">Chatbots</div>
+                            <div class="text-center text-sm py-2 px-3 rounded-md border border-white/10 bg-white/5 text-neutral-400 peer-checked:bg-[#6366F1]/20 peer-checked:text-[#6366F1] peer-checked:border-[#6366F1] transition-all">Custom Agent</div>
                         </label>
                         <label class="cursor-pointer">
                             <input type="checkbox" class="peer sr-only">
-                            <div class="text-center text-sm py-2 px-3 rounded-md border border-white/10 bg-white/5 text-neutral-400 peer-checked:bg-[#6366F1]/20 peer-checked:text-[#6366F1] peer-checked:border-[#6366F1] transition-all">Workflows</div>
-                        </label>
-                        <label class="cursor-pointer">
-                            <input type="checkbox" class="peer sr-only">
-                            <div class="text-center text-sm py-2 px-3 rounded-md border border-white/10 bg-white/5 text-neutral-400 peer-checked:bg-[#6366F1]/20 peer-checked:text-[#6366F1] peer-checked:border-[#6366F1] transition-all">Other</div>
+                            <div class="text-center text-sm py-2 px-3 rounded-md border border-white/10 bg-white/5 text-neutral-400 peer-checked:bg-[#6366F1]/20 peer-checked:text-[#6366F1] peer-checked:border-[#6366F1] transition-all">Workflow Automation</div>
                         </label>
                     </div>
                 </div>
@@ -439,7 +438,7 @@ border-radius: 4px;
                 <div>
                     <h4 class="text-sm font-semibold text-white mb-4">Services</h4>
                     <ul class="space-y-3 text-sm text-neutral-500">
-                        <li><a href="#" class="hover:text-white transition-colors">AI Consulting</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">AI Consultation</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Custom Agents</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Workflow Automation</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Data Analysis</a></li>
