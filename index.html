@@ -1,0 +1,614 @@
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intellagent | AI Automation Agency</title>
+<meta name="description" content="AI Automations for B2B applications. We build intelligent agents that scale your business.">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+body {
+font-family: 'Inter', sans-serif;
+background-color: #0A0A0A;
+color: #ffffff;
+overflow-x: hidden;
+}
+/* Glow effects */
+.gradient-text {
+background: linear-gradient(to bottom right, #ffffff, #a5a5a5);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+/* Hide scrollbar for clean design */
+::-webkit-scrollbar {
+width: 8px;
+}
+::-webkit-scrollbar-track {
+background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+background: #333;
+border-radius: 4px;
+}
+</style></head>
+<body class="antialiased selection:bg-[#6366F1] selection:text-white relative">
+
+    <!-- 3D Animation Canvas -->
+    <div class="fixed inset-0 z-0 bg-[#020204]">
+        <canvas id="blob-canvas" class="w-full h-full opacity-100"></canvas>
+        <!-- Vignette overlay for depth focus -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#0A0A0A_90%)] pointer-events-none"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 border-b border-white/5 bg-[#0A0A0A]/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-1 group">
+                <span class="text-2xl font-semibold tracking-tight text-white group-hover:text-white/90 transition-colors">intellagent</span>
+                <div class="w-2 h-2 rounded-full bg-[#6366F1] mt-1 animate-pulse"></div>
+            </a>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-neutral-400">
+                <a href="#services" class="hover:text-white transition-colors">Services</a>
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#blog" class="hover:text-white transition-colors">Insights</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="#contact" class="hidden md:flex items-center gap-2 text-sm font-medium bg-white text-black px-4 py-2 rounded-full hover:bg-neutral-200 transition-colors">
+                    Book Strategy Call
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-white">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative z-10 pt-32 pb-20 md:pt-48 md:pb-32 px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-medium text-[#6366F1] mb-8">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#6366F1] opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-[#6366F1]"></span>
+                </span>
+                The Future of B2B Automation
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-medium tracking-tight text-white mb-8 leading-[1.1]">
+                Scale operations with <br class="hidden md:block">
+                <span class="gradient-text">intelligent agents.</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                We build custom AI infrastructures that automate complex workflows, reduce overhead, and unlock exponential growth for forward-thinking enterprises.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 bg-[#6366F1] hover:bg-[#5558DD] text-white font-medium rounded-full transition-all shadow-[0_0_20px_-5px_rgba(99,102,241,0.5)] flex items-center justify-center gap-2">
+                    Request a Proposal
+                    <i data-lucide="sparkles" class="w-4 h-4"></i>
+                </a>
+                <a href="#services" class="w-full sm:w-auto px-8 py-3.5 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium rounded-full transition-all backdrop-blur-sm flex items-center justify-center gap-2">
+                    Explore Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By -->
+    <section class="relative z-10 py-10 border-y border-white/5 bg-black/20 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <p class="text-center text-sm text-neutral-500 mb-8 font-medium">TRUSTED BY INNOVATIVE TEAMS</p>
+            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-40 grayscale">
+                <!-- Simple abstract logos using text for demo -->
+                <span class="text-xl font-semibold tracking-tighter">ACME Corp</span>
+                <span class="text-xl font-semibold tracking-tighter">NEXUS</span>
+                <span class="text-xl font-semibold tracking-tighter">Starlight</span>
+                <span class="text-xl font-semibold tracking-tighter">GlobalBank</span>
+                <span class="text-xl font-semibold tracking-tighter">Hyperion</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition / About Us -->
+    <section id="about" class="relative z-10 py-24 md:py-32 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-medium tracking-tight mb-6">Built for accuracy,<br>designed for scale.</h2>
+                <div class="space-y-6 text-lg text-neutral-400 font-light">
+                    <p>
+                        At Intellagent, we don't just wrap ChatGPT. We engineer robust, multi-agent systems tailored to your specific B2B use cases. 
+                    </p>
+                    <p>
+                        Our mission is to bridge the gap between bleeding-edge AI research and practical, reliable business applications. Whether it's automated outreach, data analysis, or customer support, our agents work 24/7 with human-level reasoning.
+                    </p>
+                    <ul class="space-y-4 mt-8">
+                        <li class="flex items-center gap-3">
+                            <div class="bg-[#6366F1]/10 p-1.5 rounded-full text-[#6366F1]">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-white text-base">99.9% Uptime &amp; Reliability</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="bg-[#6366F1]/10 p-1.5 rounded-full text-[#6366F1]">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-white text-base">Enterprise-grade Security</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="bg-[#6366F1]/10 p-1.5 rounded-full text-[#6366F1]">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-white text-base">Seamless API Integrations</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="relative">
+                <div class="absolute inset-0 bg-gradient-to-tr from-[#6366F1]/20 to-transparent blur-3xl rounded-full"></div>
+                <div class="relative bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-xl">
+                    <div class="flex items-center justify-between mb-8 border-b border-white/5 pb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50"></div>
+                        </div>
+                        <span class="text-xs text-neutral-500 font-mono">agent_workflow.py</span>
+                    </div>
+                    <div class="space-y-4 font-mono text-sm">
+                        <div class="flex gap-4">
+                            <span class="text-neutral-600">01</span>
+                            <span class="text-[#6366F1]">import</span> <span class="text-white">Intellagent</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="text-neutral-600">02</span>
+                            <span class="text-neutral-400">// Initialize Lead Generation Bot</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="text-neutral-600">03</span>
+                            <span class="text-white">agent = Intellagent.create({</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="text-neutral-600">04</span>
+                            <span class="text-white pl-4">role: <span class="text-green-400">"Sales Development"</span>,</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="text-neutral-600">05</span>
+                            <span class="text-white pl-4">capabilities: [<span class="text-green-400">"Email"</span>, <span class="text-green-400">"CRM"</span>]</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="text-neutral-600">06</span>
+                            <span class="text-white">});</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="text-neutral-600">07</span>
+                            <span class="text-white">await agent.deploy();</span>
+                        </div>
+                        <div class="flex gap-4 mt-4">
+                            <span class="text-neutral-600">08</span>
+                            <span class="text-green-400">&gt;&gt; Agent Active: Processing 4,000 leads/hr</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="relative z-10 py-24 bg-neutral-900/30">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-medium tracking-tight mb-4">Core Capabilities</h2>
+                <p class="text-lg text-neutral-400">Comprehensive automation solutions tailored to modernize your business infrastructure.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Service 1 -->
+                <div class="group relative p-8 rounded-2xl bg-[#0A0A0A] border border-white/5 hover:border-white/10 transition-colors overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#6366F1]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center mb-6 text-white group-hover:text-[#6366F1] transition-colors">
+                        <i data-lucide="bot" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3 text-white">Custom AI Agents</h3>
+                    <p class="text-neutral-400 leading-relaxed">
+                        Tailored conversational agents that handle support, onboarding, and internal knowledge retrieval with context-aware precision.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="group relative p-8 rounded-2xl bg-[#0A0A0A] border border-white/5 hover:border-white/10 transition-colors overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#6366F1]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center mb-6 text-white group-hover:text-[#6366F1] transition-colors">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3 text-white">Workflow Automation</h3>
+                    <p class="text-neutral-400 leading-relaxed">
+                        End-to-end automation of repetitive tasks. We connect your existing stack (CRM, ERP, Slack) to eliminate manual data entry.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="group relative p-8 rounded-2xl bg-[#0A0A0A] border border-white/5 hover:border-white/10 transition-colors overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#6366F1]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center mb-6 text-white group-hover:text-[#6366F1] transition-colors">
+                        <i data-lucide="database" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3 text-white">Data Intelligence</h3>
+                    <p class="text-neutral-400 leading-relaxed">
+                        Transform unstructured data into actionable insights. Automated reporting, forecasting, and trend analysis pipelines.
+                    </p>
+                </div>
+
+                 <!-- Service 4 -->
+                 <div class="group relative p-8 rounded-2xl bg-[#0A0A0A] border border-white/5 hover:border-white/10 transition-colors overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#6366F1]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center mb-6 text-white group-hover:text-[#6366F1] transition-colors">
+                        <i data-lucide="message-square" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3 text-white">NLP Solutions</h3>
+                    <p class="text-neutral-400 leading-relaxed">
+                        Sentiment analysis, document summarization, and automated content generation engines designed for high-volume needs.
+                    </p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="group relative p-8 rounded-2xl bg-[#0A0A0A] border border-white/5 hover:border-white/10 transition-colors overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#6366F1]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center mb-6 text-white group-hover:text-[#6366F1] transition-colors">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3 text-white">AI Compliance</h3>
+                    <p class="text-neutral-400 leading-relaxed">
+                        Ensuring your AI implementations meet GDPR, SOC2, and industry-specific regulations through rigorous auditing.
+                    </p>
+                </div>
+
+                <!-- Service 6: CTA Card -->
+                <div class="relative p-8 rounded-2xl bg-[#6366F1] border border-[#6366F1] flex flex-col justify-between overflow-hidden">
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-medium mb-3 text-white">Custom Solutions</h3>
+                        <p class="text-white/80 leading-relaxed mb-6">
+                            Have a unique challenge? We build bespoke AI architectures.
+                        </p>
+                        <a href="#contact" class="inline-flex items-center gap-2 bg-white text-[#6366F1] px-5 py-2 rounded-full text-sm font-medium hover:bg-neutral-100 transition-colors">
+                            Get a Quote <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                    <!-- Decorative Circle -->
+                    <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-white/20 rounded-full blur-2xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog / Resources -->
+    <section id="blog" class="relative z-10 py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-3xl font-medium tracking-tight mb-2">Latest Insights</h2>
+                    <p class="text-lg text-neutral-400">Trends in AI automation and agency news.</p>
+                </div>
+                <a href="#" class="hidden md:flex items-center gap-2 text-sm text-[#6366F1] hover:text-[#818cf8] transition-colors">
+                    View all articles <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <article class="group cursor-pointer">
+                    <div class="relative h-56 w-full mb-6 overflow-hidden rounded-xl border border-white/5 bg-white/5">
+                         <!-- Abstract Placeholder -->
+                        <div class="absolute inset-0 bg-neutral-900 group-hover:scale-105 transition-transform duration-500 flex items-center justify-center">
+                            <i data-lucide="cpu" class="w-12 h-12 text-neutral-700"></i>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 text-xs text-neutral-500 mb-3">
+                        <span class="bg-white/5 px-2 py-1 rounded text-white/80">Strategy</span>
+                        <span>Oct 12, 2023</span>
+                    </div>
+                    <h3 class="text-xl font-medium mb-2 group-hover:text-[#6366F1] transition-colors">Implementing LLMs in Legacy Financial Systems</h3>
+                    <p class="text-neutral-400 line-clamp-2">How to securely integrate Large Language Models without compromising data integrity in regulated sectors.</p>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="group cursor-pointer">
+                    <div class="relative h-56 w-full mb-6 overflow-hidden rounded-xl border border-white/5 bg-white/5">
+                        <div class="absolute inset-0 bg-neutral-900 group-hover:scale-105 transition-transform duration-500 flex items-center justify-center">
+                            <i data-lucide="network" class="w-12 h-12 text-neutral-700"></i>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 text-xs text-neutral-500 mb-3">
+                        <span class="bg-white/5 px-2 py-1 rounded text-white/80">Automation</span>
+                        <span>Oct 08, 2023</span>
+                    </div>
+                    <h3 class="text-xl font-medium mb-2 group-hover:text-[#6366F1] transition-colors">The Rise of Autonomous Sales Agents</h3>
+                    <p class="text-neutral-400 line-clamp-2">Why human-in-the-loop AI agents are outperforming traditional SDR workflows by 300%.</p>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="group cursor-pointer">
+                    <div class="relative h-56 w-full mb-6 overflow-hidden rounded-xl border border-white/5 bg-white/5">
+                        <div class="absolute inset-0 bg-neutral-900 group-hover:scale-105 transition-transform duration-500 flex items-center justify-center">
+                            <i data-lucide="code-2" class="w-12 h-12 text-neutral-700"></i>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 text-xs text-neutral-500 mb-3">
+                        <span class="bg-white/5 px-2 py-1 rounded text-white/80">Engineering</span>
+                        <span>Sep 29, 2023</span>
+                    </div>
+                    <h3 class="text-xl font-medium mb-2 group-hover:text-[#6366F1] transition-colors">Prompt Engineering vs. Fine-Tuning</h3>
+                    <p class="text-neutral-400 line-clamp-2">A technical deep dive into when you should optimize prompts versus investing in model fine-tuning.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="relative z-10 py-24 px-6 border-t border-white/5 bg-white/[0.02]">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-medium tracking-tight mb-4">Ready to accelerate?</h2>
+                <p class="text-lg text-neutral-400">Book a strategy call or request a proposal. We usually respond within 24 hours.</p>
+            </div>
+
+            <form class="space-y-6 bg-[#0A0A0A] p-8 md:p-10 rounded-2xl border border-white/10 shadow-2xl">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label for="name" class="text-sm font-medium text-neutral-300">Full Name</label>
+                        <input type="text" id="name" placeholder="John Doe" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-neutral-600 focus:outline-none focus:border-[#6366F1] focus:ring-1 focus:ring-[#6366F1] transition-all">
+                    </div>
+                    <div class="space-y-2">
+                        <label for="email" class="text-sm font-medium text-neutral-300">Work Email</label>
+                        <input type="email" id="email" placeholder="john@company.com" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-neutral-600 focus:outline-none focus:border-[#6366F1] focus:ring-1 focus:ring-[#6366F1] transition-all">
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <label for="company" class="text-sm font-medium text-neutral-300">Company Name</label>
+                    <input type="text" id="company" placeholder="Acme Inc." class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-neutral-600 focus:outline-none focus:border-[#6366F1] focus:ring-1 focus:ring-[#6366F1] transition-all">
+                </div>
+
+                <div class="space-y-2">
+                    <label for="interest" class="text-sm font-medium text-neutral-300">Interested In</label>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                        <label class="cursor-pointer">
+                            <input type="checkbox" class="peer sr-only">
+                            <div class="text-center text-sm py-2 px-3 rounded-md border border-white/10 bg-white/5 text-neutral-400 peer-checked:bg-[#6366F1]/20 peer-checked:text-[#6366F1] peer-checked:border-[#6366F1] transition-all">Consulting</div>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="checkbox" class="peer sr-only">
+                            <div class="text-center text-sm py-2 px-3 rounded-md border border-white/10 bg-white/5 text-neutral-400 peer-checked:bg-[#6366F1]/20 peer-checked:text-[#6366F1] peer-checked:border-[#6366F1] transition-all">Chatbots</div>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="checkbox" class="peer sr-only">
+                            <div class="text-center text-sm py-2 px-3 rounded-md border border-white/10 bg-white/5 text-neutral-400 peer-checked:bg-[#6366F1]/20 peer-checked:text-[#6366F1] peer-checked:border-[#6366F1] transition-all">Workflows</div>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="checkbox" class="peer sr-only">
+                            <div class="text-center text-sm py-2 px-3 rounded-md border border-white/10 bg-white/5 text-neutral-400 peer-checked:bg-[#6366F1]/20 peer-checked:text-[#6366F1] peer-checked:border-[#6366F1] transition-all">Other</div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <label for="message" class="text-sm font-medium text-neutral-300">Project Details</label>
+                    <textarea id="message" rows="4" placeholder="Tell us about your automation goals..." class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-neutral-600 focus:outline-none focus:border-[#6366F1] focus:ring-1 focus:ring-[#6366F1] transition-all resize-none"></textarea>
+                </div>
+
+                <button type="button" class="w-full py-4 bg-[#6366F1] hover:bg-[#5558DD] text-white font-medium rounded-lg transition-colors shadow-lg shadow-[#6366F1]/20">
+                    Send Request
+                </button>
+
+                <p class="text-xs text-center text-neutral-600 mt-4">
+                    By submitting this form, you agree to our privacy policy.
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative z-10 border-t border-white/5 bg-black pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-1">
+                    <a href="#" class="flex items-center gap-1 group mb-6">
+                        <span class="text-2xl font-semibold tracking-tight text-white">intellagent</span>
+                        <div class="w-2 h-2 rounded-full bg-[#6366F1] mt-1"></div>
+                    </a>
+                    <p class="text-sm text-neutral-500 mb-6">
+                        Empowering enterprises with next-generation AI automation and intelligent agent infrastructures.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-neutral-500 hover:text-white transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                        <a href="#" class="text-neutral-500 hover:text-white transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        <a href="#" class="text-neutral-500 hover:text-white transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-semibold text-white mb-4">Services</h4>
+                    <ul class="space-y-3 text-sm text-neutral-500">
+                        <li><a href="#" class="hover:text-white transition-colors">AI Consulting</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Custom Agents</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Workflow Automation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Data Analysis</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-semibold text-white mb-4">Company</h4>
+                    <ul class="space-y-3 text-sm text-neutral-500">
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#blog" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-semibold text-white mb-4">Contact</h4>
+                    <address class="not-italic text-sm text-neutral-500 space-y-3">
+                        <p class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 mt-0.5 shrink-0"></i>
+                            123 Innovation Dr, Suite 400<br>San Francisco, CA 94103
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 shrink-0"></i>
+                            <a href="tel:+15550123456" class="hover:text-white transition-colors">+1 (555) 012-3456</a>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4 shrink-0"></i>
+                            <a href="mailto:hello@intellagent.ai" class="hover:text-white transition-colors">hello@intellagent.ai</a>
+                        </p>
+                    </address>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-neutral-600">© 2024 Intellagent Inc. All rights reserved.</p>
+                <div class="flex items-center gap-2 text-xs text-neutral-600">
+                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                    All Systems Operational
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Live Chat Button -->
+    <button class="fixed bottom-6 right-6 z-50 bg-[#6366F1] hover:bg-[#5558DD] text-white p-4 rounded-full shadow-lg shadow-[#6366F1]/30 transition-all hover:scale-105" aria-label="Chat with us">
+        <i data-lucide="message-circle" class="w-6 h-6"></i>
+    </button>
+
+    <!-- Initializing Icons -->
+    <script>
+        lucide.createIcons({
+            attrs: {
+                strokeWidth: 1.5
+            }
+        });
+
+        // 3D Point Cloud Blob Animation
+        const canvas = document.getElementById('blob-canvas');
+        const ctx = canvas.getContext('2d');
+
+        let width, height;
+        let particles = [];
+        
+        // Settings
+        const numParticles = 2500;
+        const baseColor = { r: 99, g: 102, b: 241 }; // #6366F1
+        let rotationX = 0;
+        let rotationY = 0;
+        
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            initParticles();
+        }
+        
+        function initParticles() {
+            particles = [];
+            for (let i = 0; i < numParticles; i++) {
+                // Spherical distribution
+                const theta = Math.random() * Math.PI * 2;
+                const phi = Math.acos((Math.random() * 2) - 1);
+                const r = 250 + Math.random() * 100; // Base radius
+                
+                particles.push({
+                    theta,
+                    phi,
+                    r,
+                    originalR: r,
+                    speed: 0.005 + Math.random() * 0.005,
+                    noisePhase: Math.random() * Math.PI * 2
+                });
+            }
+        }
+        
+        function draw() {
+            ctx.clearRect(0, 0, width, height);
+            
+            // Center of screen
+            const cx = width / 2;
+            const cy = height / 2;
+            
+            const time = Date.now() * 0.0008;
+            
+            // Rotate the whole cloud slowly
+            rotationY += 0.003;
+            rotationX = Math.sin(time * 0.5) * 0.2;
+            
+            // Sort particles by Z depth for correct rendering order
+            const projected = [];
+            
+            particles.forEach(p => {
+                // Apply organic noise to radius (breathing effect)
+                const noise = Math.sin(p.theta * 5 + time) * Math.cos(p.phi * 3 + time) * 30;
+                const currentR = p.originalR + noise;
+                
+                // Convert spherical to cartesian
+                let x = currentR * Math.sin(p.phi) * Math.cos(p.theta);
+                let y = currentR * Math.sin(p.phi) * Math.sin(p.theta);
+                let z = currentR * Math.cos(p.phi);
+                
+                // Rotation Matrix Y
+                let tempX = x * Math.cos(rotationY) - z * Math.sin(rotationY);
+                let tempZ = x * Math.sin(rotationY) + z * Math.cos(rotationY);
+                x = tempX; z = tempZ;
+                
+                // Rotation Matrix X
+                let tempY = y * Math.cos(rotationX) - z * Math.sin(rotationX);
+                z = y * Math.sin(rotationX) + z * Math.cos(rotationX);
+                y = tempY;
+                
+                // 3D Perspective Projection
+                const perspective = 800;
+                const scale = perspective / (perspective + z);
+                
+                projected.push({
+                    x: x * scale + cx,
+                    y: y * scale + cy,
+                    z: z,
+                    scale: scale,
+                    alpha: (z + 400) / 800 // Simple depth fading
+                });
+            });
+            
+            // Sort by depth (z)
+            projected.sort((a, b) => b.z - a.z);
+            
+            // Draw particles
+            projected.forEach(p => {
+                if (p.scale > 0) {
+                    const alpha = Math.max(0.1, Math.min(1, p.alpha));
+                    
+                    // Draw squares for the pixelated look
+                    ctx.fillStyle = `rgba(${baseColor.r}, ${baseColor.g}, ${baseColor.b}, ${alpha * 0.8})`;
+                    
+                    const size = 3 * p.scale;
+                    if (size > 0.5) {
+                        ctx.fillRect(p.x - size/2, p.y - size/2, size, size);
+                    }
+                }
+            });
+            
+            requestAnimationFrame(draw);
+        }
+        
+        window.addEventListener('resize', resize);
+        resize();
+        draw();
+    </script>
+
+</body></html>
